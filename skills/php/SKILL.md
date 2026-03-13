@@ -98,8 +98,38 @@ if ($step === 1)
     $step = 2;
 ```
 
+## Use statements
+
+When coding under a specific namespace, always use `use` statements to import classes, functions, or constants from other namespaces. Do not use `\` to reference classes, functions, or constants from other namespaces without importing them with `use` statements. 
+
 ## Readability
 
 * Variable names should be descriptive and meaningful, reflecting the purpose of the variable. Avoid using single-letter variable names except for loop counters.
 * Variable names should not include their data type or data type abbreviations as a prefix or suffix. For example, use `$users` instead of `$arrayUsers` or `$arrUsers`.
 * Variable names should not include their context as a prefix or suffix inside a scope that already provides the meaning. For example, if a variable is used inside a function that processes user data, the variable name should not include "user" as a prefix or suffix. Instead of `$userName`, use `$name`.
+
+## Documentation
+
+Unless specified with the input "NOPHPDOC", always document PHP code with docblocks using PHPDoc:
+* global functions
+* classes
+* traits
+* interfaces
+* class methods (public, protected, and private)
+* class variables (public, protected, and private)
+* class constants (public, protected, and private)
+
+Docblocks include:
+* Description on the code being commented.
+* Description of the parameters (tag `@param`).
+* Description of return values (tag `@return`).
+* Description of variable types (tag `@var`).
+* Description of any exceptions thrown (tag `@throw`).
+* When a version is available, version information (tag `@version`).
+    * For class methods, variables and constants use since information instead (tag `@since`).
+
+## Exclusions
+
+In test cases using PHPUnit, do not include:
+* Description of return values (tag `@return`).
+* Description of any exceptions thrown (tag `@throw`).
