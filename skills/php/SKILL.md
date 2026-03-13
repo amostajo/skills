@@ -1,7 +1,7 @@
 ---
 name: php
 description: "Use this skill any time a .php file is involved in any way — as input, output, or both. This includes: creating PHP scripts, reading or parsing existing PHP code, editing or modifying PHP files, or working with PHP templates. Trigger whenever the user mentions \"PHP,\" references a .php filename, or indicates they want to work with PHP code in any way. If a .php file needs to be opened, created, or touched, use this skill."
-license: Proprietary. LICENSE.txt has complete terms
+license: GPLv3
 ---
 
 # PHP skill
